@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/app.css">
+</head>
+<body>
+<div id="app">
+
+    <modal></modal>
+
+    <!--Filter-->
+    <div>
+        <input type="text" placeholder="UID or EAN">
+        <select>
+            <option selected disabled>Season</option>
+        </select>
+        <select>
+            <option selected disabled>Order Group</option>
+        </select>
+        <select>
+            <option selected disabled>Trademark</option>
+        </select>
+        <select>
+            <option selected disabled>Brand</option>
+        </select>
+    </div>
+
+    <!--    <a href="">Boxes</a>-->
+    <!--    <a href="">Lists</a>-->
+
+    <!--Table-->
+    <table v-if="articles.length">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Article</th>
+                <th>Color</th>
+                <th>Trademark</th>
+                <th>Season</th>
+                <th>Brand</th>
+                <th>Order Group</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(article, index) in articles">
+                <td><a @click="openModal(this)">{{ article.name }}</a></td>
+                <td>{{ article.article }}</td>
+                <td>{{ article.color }}</td>
+                <td>{{ article.trademark }}</td>
+                <td>{{ article.season }}</td>
+                <td>{{ article.brand }}</td>
+                <td>{{ article.order_group }}</td>
+                <td>
+                    <img src="#" alt="" width="120" height="120">
+                </td>
+            </tr>
+        </tbody>
+        <caption>Posledná aktualizácia 16.07.2020 16:00</caption>
+    </table>
+
+    <!--Pagination-->
+    <p><b>TODO: </b>Pagination</p>
+
+</div>
+<script src="dist/js/app.js"></script>
+</body>
+</html>
