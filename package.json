@@ -2,15 +2,6 @@
   "name": "vpg",
   "version": "1.0.0",
   "description": "Experimental project to test Vue.js",
-  "scripts": {
-    "dev": "npm run development",
-    "development": "mix",
-    "watch": "mix watch",
-    "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "prod": "npm run production",
-    "production": "mix --production"
-  },
   "author": "Bruno Dilhof",
   "license": "ISC",
   "dependencies": {
@@ -18,13 +9,4 @@
     "tailwindcss": "^2.2.4",
     "vue": "^2.6.14"
   },
-  "devDependencies": {
-    "autoprefixer": "^10.1.0",
-    "axios": "^0.21",
-    "laravel-mix": "^6.0.6",
-    "postcss": "^8.2.1",
-    "postcss-import": "^12.0.1",
-    "vue-loader": "^15.9.7",
-    "vue-template-compiler": "^2.6.14"
-  }
 }
